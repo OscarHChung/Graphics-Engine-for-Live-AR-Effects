@@ -3,6 +3,11 @@ project(SnapShaderPluginEngine)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Add GLAD library
+add_library(glad src/glad.c)
+target_include_directories(glad PUBLIC include)
+
+# Main executable
 add_executable(SnapShaderPluginEngine
     src/main.cpp
     src/Engine.cpp
@@ -11,9 +16,16 @@ add_executable(SnapShaderPluginEngine
     src/Metrics.cpp
 )
 
+# Find packages
 find_package(OpenGL REQUIRED)
+find_package(glfw3 REQUIRED)
 
-add_subdirectory(glfw)
-include_directories(glfw/include)
+# Include directories
+target_include_directories(SnapShaderPluginEngine PRIVATE include)
 
-target_link_libraries(SnapShaderPluginEngine glfw OpenGL::GL)
+# Link libraries
+target_link_libraries(SnapShaderPluginEngine 
+    glfw 
+    OpenGL::GL 
+    glad
+)
