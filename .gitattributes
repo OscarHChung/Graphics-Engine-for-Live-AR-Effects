@@ -1,0 +1,11 @@
+cat > .gitattributes << 'EOF'
+# Mark GLAD as vendored (exclude from language stats)
+src/glad.c linguist-vendored
+include/glad/* linguist-vendored
+include/KHR/* linguist-vendored
+
+# Explicitly mark project language
+*.cpp linguist-detectable=true
+*.hpp linguist-detectable=true
+*.c linguist-detectable=false
+EOF
