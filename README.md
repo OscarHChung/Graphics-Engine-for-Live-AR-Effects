@@ -44,3 +44,14 @@ Press **SPACE** to cycle through effects in real-time:
 
 ### Prerequisites
 ```bash
+brew install cmake glfw
+git clone https://github.com/OscarHChung/Graphics-Engine-for-Live-AR-Effects.git
+cd Graphics-Engine-for-Live-AR-Effects
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+cmake --build .
+./SnapShaderPluginEngine
+```
+
+**Controls:** `SPACE` = toggle effects | `ESC` = exit
+
