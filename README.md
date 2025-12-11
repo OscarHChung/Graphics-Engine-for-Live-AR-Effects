@@ -1,12 +1,10 @@
 # Graphics Engine for Live AR Effects
 
-A high-performance C++ graphics engine with **hot-swappable shader system** for real-time visual effects — achieving **300+ FPS at 1080p** with sub-5ms effect transitions.
+A high-performance C++ graphics engine with **hot-swappable shader system** for real-time visual effects, achieving **300+ FPS at 1080p** with sub-5ms effect transitions.
 
 ## What It Does
 
 This engine demonstrates the core technology behind AR filter platforms like Snapchat Lenses, Instagram filters, and TikTok effects. It renders GPU-accelerated visual effects with **zero-downtime shader swapping**, enabling instant effect changes without application restart.
-
-https://github.com/user-attachments/assets/your-demo-video-here
 
 ## Key Features
 
@@ -20,7 +18,7 @@ https://github.com/user-attachments/assets/your-demo-video-here
 ## Performance (on my personal hardware)
 
 **Hardware:** Apple M2 MacBook Pro  
-**Resolution:** 1920x1080 (Full HD)  
+**Resolution:** 1920x1080
 **OpenGL:** 3.3 Core Profile
 
 | Metric | Result |
