@@ -1,6 +1,6 @@
 # Graphics Engine for Live AR Effects
 
-A high-performance C++ graphics engine with **hot-swappable shader system** for real-time visual effects, achieving **300+ FPS at 1080p** with sub-5ms effect transitions.
+A high-performance C++ graphics engine with **hot-swappable shader system** for real-time visual effects, achieving **300+ FPS at 1080p** with 4ms effect transitions.
 
 ## What It Does
 
