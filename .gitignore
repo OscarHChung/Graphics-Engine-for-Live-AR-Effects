@@ -1,0 +1,78 @@
+cat > .gitignore << 'EOF'
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+compile_commands.json
+
+# Executables
+*.exe
+*.out
+*.app
+SnapShaderPluginEngine
+test
+
+# Object files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.lo
+
+# macOS specific
+.DS_Store
+*.dSYM/
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/c_cpp_properties.json
+
+# CLion
+.idea/
+*.iml
+
+# Xcode
+*.xcodeproj
+*.xcworkspace
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Metrics output
+metrics.txt
+src/metrics.txt
+
+# Temporary files
+*.swp
+*.swo
+*~
+.*.sw?
+
+# Prerequisites
+*.d
+
+# Package managers
+.conan/
+vcpkg_installed/
+EOF

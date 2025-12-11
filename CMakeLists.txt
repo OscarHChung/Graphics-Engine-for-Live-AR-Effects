@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(SnapShaderPluginEngine)
 
 set(CMAKE_CXX_STANDARD 17)
+add_definitions(-DGL_SILENCE_DEPRECATION)
 
 # Add GLAD library
 add_library(glad src/glad.c)
@@ -15,6 +16,10 @@ add_executable(SnapShaderPluginEngine
     src/Plugin.cpp
     src/Metrics.cpp
 )
+
+# Copy shaders to build directory
+file(COPY ${CMAKE_SOURCE_DIR}/shaders 
+     DESTINATION ${CMAKE_BINARY_DIR})
 
 # Find packages
 find_package(OpenGL REQUIRED)
