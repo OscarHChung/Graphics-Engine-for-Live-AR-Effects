@@ -9,8 +9,10 @@ uniform float u_time;
 uniform vec2 u_resolution;
 
 void main() {
-    // Animated gradient based on position and time
+    // Apply wave distortion
     vec2 uv = FragCoord;
+    uv.x += sin(uv.y * 10.0 + u_time * 2.0) * 0.05;
+    uv.y += cos(uv.x * 10.0 + u_time * 2.0) * 0.05;
     
     float r = 0.5 + 0.5 * sin(u_time + uv.x * 3.0);
     float g = 0.5 + 0.5 * cos(u_time + uv.y * 3.0);

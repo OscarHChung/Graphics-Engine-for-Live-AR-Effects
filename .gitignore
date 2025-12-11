@@ -1,8 +1,9 @@
-cat > .gitignore << 'EOF'
 # Build directories
 build/
 cmake-build-*/
 out/
+bin/
+lib/
 
 # CMake generated files
 CMakeCache.txt
@@ -39,6 +40,7 @@ test
 *.dSYM/
 .AppleDouble
 .LSOverride
+._*
 
 # VS Code
 .vscode/*
@@ -50,6 +52,7 @@ test
 # CLion
 .idea/
 *.iml
+cmake-build-*/
 
 # Xcode
 *.xcodeproj
@@ -58,16 +61,19 @@ test
 *.mode1v3
 *.mode2v3
 *.perspectivev3
+xcuserdata/
 
-# Metrics output
+# Metrics and logs
 metrics.txt
-src/metrics.txt
+*.log
+performance_report.txt
 
 # Temporary files
 *.swp
 *.swo
 *~
 .*.sw?
+*.tmp
 
 # Prerequisites
 *.d
@@ -75,4 +81,14 @@ src/metrics.txt
 # Package managers
 .conan/
 vcpkg_installed/
-EOF
+_deps/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Editor files
+.vscode/
+.vim/
+*.sublime-*

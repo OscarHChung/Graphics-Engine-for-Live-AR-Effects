@@ -34,3 +34,8 @@ target_link_libraries(SnapShaderPluginEngine
     OpenGL::GL 
     glad
 )
+
+# Optimization flags for maximum performance
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    target_compile_options(SnapShaderPluginEngine PRIVATE -O3 -march=native)
+endif()
