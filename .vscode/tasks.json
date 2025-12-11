@@ -11,6 +11,12 @@
                 "-g",
                 "-std=c++17",
                 "-stdlib=libc++",
+                "-I/opt/homebrew/include",
+                "-L/opt/homebrew/lib",
+                "-lglfw",
+                "-framework", "OpenGL",
+                "-framework", "Cocoa",
+                "-framework", "IOKit",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
