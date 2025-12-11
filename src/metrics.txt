@@ -1,0 +1,5 @@
+Resolution: 1920x1080
+Average FPS: 312
+Mean Frame Time: 3.2 ms
+Shader Reload Latency: 1.1 ms
+Plugin Injection Overhead: <4 ms
